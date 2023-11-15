@@ -10,6 +10,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 import com.example.cdpm_7meals.R;
 
 
@@ -49,5 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_SCREEN_TIME);
+
+        AppCenter.start(getApplication(), "c18204a9-4d49-4af0-9e7a-5048ced054ee", Analytics.class, Crashes.class);
     }
 }
